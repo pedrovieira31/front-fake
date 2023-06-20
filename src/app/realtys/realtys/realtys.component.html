@@ -1,9 +1,14 @@
-<mat-card>
+<mat-card class="card-div">
   <mat-card-content>
     <mat-toolbar color="primary">
       <span>Imóveis</span>
       <span class="example-spacer"></span>
-      <button mat-mini-fab class="addButton">
+      <button
+        mat-mini-fab
+        class="add-button"
+        aria-label="Adicionar imóvel"
+        (click)="onAdd()"
+      >
         <mat-icon>add_circle</mat-icon>
       </button>
     </mat-toolbar>
@@ -34,6 +39,16 @@
       <ng-container matColumnDef="dataAnuncio">
         <th mat-header-cell *matHeaderCellDef>Data Anuncio</th>
         <td mat-cell *matCellDef="let realty">{{ realty.dataAnuncio }}</td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+        <mat-cell *matCellDef="let realty">
+          <button mat-icon-button class="delete-button">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

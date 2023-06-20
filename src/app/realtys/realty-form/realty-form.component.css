@@ -1,0 +1,28 @@
+.form-div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.add-button {
+  background-color: green;
+}
+h5 {
+  font-size: 1.7em;
+  padding: 1em 0em 1em 0em;
+  font-family: "Roboto";
+}
+
+.card-div {
+  width: 50em;
+  border-radius: 5%;
+  margin: 3em 1em 1em 1em !important;
+}
+
+.input-div {
+  width: 400px;
+}
+.delete-button {
+  color: red;
+}

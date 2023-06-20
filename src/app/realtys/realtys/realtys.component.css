@@ -2,7 +2,22 @@ table {
   width: 100%;
 }
 
-.addButton{
+.add-button {
   background-color: green;
 }
 
+.delete-button {
+  color: red;
+}
+
+.form-div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-div {
+  margin: 3em 1em 1em 1em !important;
+}

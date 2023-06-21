@@ -8,4 +8,5 @@ export interface Realty {
   cidade: string;
   uf: string;
   cep: string;
+  condominio: Number;
 }

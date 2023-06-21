@@ -12,7 +12,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RealtysComponent implements OnInit {
   realtys: Realty[] = [];
 
-  displayedColumns = ['tipo', 'bairro', 'valor', 'dataAnuncio', 'actions'];
+  displayedColumns = [
+    'tipo',
+    'rua',
+    'numero',
+    'bairro',
+    'uf',
+    'valor',
+    'condominio',
+    'dataAnuncio',
+    'actions',
+  ];
 
   constructor(
     private realtysService: RealtysService,

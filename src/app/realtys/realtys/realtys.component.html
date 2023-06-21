@@ -23,10 +23,28 @@
         <td mat-cell *matCellDef="let realty">{{ realty.tipo }}</td>
       </ng-container>
 
-      <!-- bairro Column -->
+      <!-- Rua Column -->
+      <ng-container matColumnDef="rua">
+        <th mat-header-cell *matHeaderCellDef>Rua</th>
+        <td mat-cell *matCellDef="let realty">{{ realty.rua }}</td>
+      </ng-container>
+
+      <!-- Numero Column -->
+      <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef>Número</th>
+        <td mat-cell *matCellDef="let realty">{{ realty.numero }}</td>
+      </ng-container>
+
+      <!-- Bairro Column -->
       <ng-container matColumnDef="bairro">
         <th mat-header-cell *matHeaderCellDef>Bairro</th>
         <td mat-cell *matCellDef="let realty">{{ realty.bairro }}</td>
+      </ng-container>
+
+      <!-- Uf Column -->
+      <ng-container matColumnDef="uf">
+        <th mat-header-cell *matHeaderCellDef>UF</th>
+        <td mat-cell *matCellDef="let realty">{{ realty.uf }}</td>
       </ng-container>
 
       <!-- Valor Column -->
@@ -35,7 +53,13 @@
         <td mat-cell *matCellDef="let realty">{{ realty.valor }}</td>
       </ng-container>
 
-      <!-- DataAnuncio Column -->
+      <!-- Condominio Column -->
+      <ng-container matColumnDef="condominio">
+        <th mat-header-cell *matHeaderCellDef>Condominio</th>
+        <td mat-cell *matCellDef="let realty">{{ realty.condominio }}</td>
+      </ng-container>
+
+      <!-- Data Anuncio Column -->
       <ng-container matColumnDef="dataAnuncio">
         <th mat-header-cell *matHeaderCellDef>Data Anuncio</th>
         <td mat-cell *matCellDef="let realty">{{ realty.dataAnuncio }}</td>

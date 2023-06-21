@@ -20,17 +20,19 @@ export class RealtysService {
         cidade: 'Belo Horizonte',
         uf: 'MG',
         cep: '12345-123',
+        condominio: 230,
       },
       {
         tipo: 'Casa',
         bairro: 'Belvedere',
         valor: 2000.0,
         dataAnuncio: '31/08/2019',
-        numero: 240,
+        numero: 820,
         rua: 'Avenida Brasil',
         cidade: 'São Paulo',
         uf: 'SP',
         cep: '56789-987',
+        condominio: 730,
       },
     ];
   }

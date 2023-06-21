@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Realty } from '../model/realty';
+import { Realty, realtyList } from '../model/realty';
 import { RealtysService } from './../services/realtys.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -36,5 +36,9 @@ export class RealtysComponent implements OnInit {
 
   onAdd() {
     this.router.navigate(['new'], { relativeTo: this.route });
+  }
+  deleteRow(value: number) {
+    const indexRealty = realtyList.findIndex((x) => x.id == value);
+    console.log(indexRealty);
   }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Realty, realtyList } from '../model/realty';
 import { RealtysService } from './../services/realtys.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-realtys',
@@ -39,6 +39,7 @@ export class RealtysComponent implements OnInit {
   }
   deleteRow(value: number) {
     const indexRealty = realtyList.findIndex((x) => x.id == value);
-    console.log(indexRealty);
+    realtyList.splice(indexRealty, 1);
+    this.realtys = [...realtyList];
   }
 }

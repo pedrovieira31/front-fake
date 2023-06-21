@@ -21,4 +21,5 @@ table {
 .card-div {
   margin: 3em 1em 1em 1em !important;
   box-shadow: none;
+  background-color: transparent;
 }

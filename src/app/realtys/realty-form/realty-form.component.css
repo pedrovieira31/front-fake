@@ -5,9 +5,7 @@
   align-items: center;
   flex-direction: column;
 }
-.add-button {
-  background-color: green;
-}
+
 h5 {
   font-size: 1.7em;
   padding: 1em 0em 1em 0em;
@@ -21,8 +19,9 @@ h5 {
 }
 
 .input-div {
-  width: 400px;
+  width: 300px;
 }
-.delete-button {
-  color: red;
+
+.spacing-form {
+  margin-right: 1em;
 }

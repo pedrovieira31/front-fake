@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Pipe, PipeTransform } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
@@ -10,9 +11,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class RealtyFormComponent implements OnInit {
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     this.form = this.formBuilder.group({
-      nome: [null],
       tipo: [null],
       valor: [null],
       dataAnuncio: [null],
@@ -23,6 +28,7 @@ export class RealtyFormComponent implements OnInit {
       cidade: [null],
       uf: [null],
       cep: [null],
+      condominio: [null],
     });
   }
   ngOnInit(): void {}
@@ -31,13 +37,24 @@ export class RealtyFormComponent implements OnInit {
       .get<any>(`https://viacep.com.br/ws/${this.form.value.cep}/json/`, {})
       .subscribe((data) => {
         this.form = this.formBuilder.group({
+          tipo: [null],
+          valor: [null],
+          dataAnuncio: new Date().toDateString(),
           rua: data.logradouro,
-          uf: data.uf,
-          cidade: data.localidade,
-          cep: data.cep,
+          numero: [null],
+          complemento: [null],
           bairro: data.bairro,
-          complemento: data.complementom,
+          cidade: data.localidade,
+          uf: data.uf,
+          cep: data.cep,
+          condominio: [null],
         });
       });
+  }
+  returnToGrid() {
+    this.router.navigate([''], { relativeTo: this.route });
+  }
+  insertRealty() {
+    console.log(this.form.value);
   }
 }

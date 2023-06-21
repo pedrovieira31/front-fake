@@ -6,15 +6,13 @@
     <mat-card-content>
       <form [formGroup]="form">
         <p>
-          <mat-form-field class="input-div">
+          <mat-form-field class="input-div spacing-form">
             <mat-label>Tipo de Imóvel</mat-label>
             <mat-select formControlName="tipo">
               <mat-option value="apartamento">Apartamento</mat-option>
               <mat-option value="casa">Casa</mat-option>
             </mat-select>
           </mat-form-field>
-        </p>
-        <p>
           <mat-form-field class="input-div">
             <mat-label>Rua</mat-label>
             <input
@@ -25,18 +23,24 @@
           </mat-form-field>
         </p>
         <p>
-          <mat-form-field class="input-div">
+          <mat-form-field class="input-div spacing-form">
             <mat-label>Numero</mat-label>
             <input matInput placeholder="50" formControlName="numero" />
           </mat-form-field>
-        </p>
-        <p>
           <mat-form-field class="input-div">
-            <mat-label>Bairro</mat-label>
-            <input matInput placeholder="Centro" formControlName="bairro" />
+            <mat-label>Complemento</mat-label>
+            <input
+              matInput
+              placeholder="apartamento 1001"
+              formControlName="complemento"
+            />
           </mat-form-field>
         </p>
         <p>
+          <mat-form-field class="input-div spacing-form">
+            <mat-label>Bairro</mat-label>
+            <input matInput placeholder="Centro" formControlName="bairro" />
+          </mat-form-field>
           <mat-form-field class="input-div">
             <mat-label>Cidade</mat-label>
             <input
@@ -47,7 +51,7 @@
           </mat-form-field>
         </p>
         <p>
-          <mat-form-field class="input-div">
+          <mat-form-field class="input-div spacing-form">
             <mat-label>Estado</mat-label>
             <input
               matInput
@@ -58,8 +62,6 @@
             />
             <mat-hint align="end">{{ uf.value.length }} / 2</mat-hint>
           </mat-form-field>
-        </p>
-        <p>
           <mat-form-field class="input-div">
             <mat-label>CEP</mat-label>
             <input
@@ -75,12 +77,29 @@
             >
           </mat-form-field>
         </p>
+        <p>
+          <mat-form-field class="input-div spacing-form">
+            <mat-label>Valor</mat-label>
+            <input matInput placeholder="1300" formControlName="valor" />
+          </mat-form-field>
+          <mat-form-field class="input-div">
+            <mat-label>Condominio</mat-label>
+            <input matInput placeholder="600" formControlName="condominio" />
+          </mat-form-field>
+        </p>
         <div class="form-div">
           <p>
-            <button mat-flat-button color="primary">Salvar</button>
-          </p>
-          <p>
-            <button mat-flat-button color="warn">Voltar</button>
+            <button
+              mat-flat-button
+              color="warn"
+              class="spacing-form"
+              (click)="returnToGrid()"
+            >
+              Voltar
+            </button>
+            <button mat-flat-button color="primary" (click)="insertRealty()">
+              Salvar
+            </button>
           </p>
         </div>
       </form>

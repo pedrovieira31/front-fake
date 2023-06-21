@@ -14,55 +14,6 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field class="input-div">
-            <mat-label>Rua</mat-label>
-            <input
-              matInput
-              placeholder="Avenida Afonso Pena"
-              formControlName="rua"
-            />
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="input-div spacing-form">
-            <mat-label>Numero</mat-label>
-            <input matInput placeholder="50" formControlName="numero" />
-          </mat-form-field>
-          <mat-form-field class="input-div">
-            <mat-label>Complemento</mat-label>
-            <input
-              matInput
-              placeholder="apartamento 1001"
-              formControlName="complemento"
-            />
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="input-div spacing-form">
-            <mat-label>Bairro</mat-label>
-            <input matInput placeholder="Centro" formControlName="bairro" />
-          </mat-form-field>
-          <mat-form-field class="input-div">
-            <mat-label>Cidade</mat-label>
-            <input
-              matInput
-              placeholder="Belo Horizonte"
-              formControlName="cidade"
-            />
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="input-div spacing-form">
-            <mat-label>Estado</mat-label>
-            <input
-              matInput
-              placeholder="UF"
-              #uf
-              formControlName="uf"
-              maxlength="2"
-            />
-            <mat-hint align="end">{{ uf.value.length }} / 2</mat-hint>
-          </mat-form-field>
-          <mat-form-field class="input-div">
             <mat-label>CEP</mat-label>
             <input
               matInput
@@ -75,6 +26,55 @@
             <mat-hint align="end"
               >{{ cep.value.length > 8 ? 8 : cep.value.length }} / 8</mat-hint
             >
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input-div spacing-form">
+            <mat-label>Rua</mat-label>
+            <input
+              matInput
+              placeholder="Avenida Afonso Pena"
+              formControlName="rua"
+            />
+          </mat-form-field>
+          <mat-form-field class="input-div">
+            <mat-label>Numero</mat-label>
+            <input matInput placeholder="50" formControlName="numero" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input-div spacing-form">
+            <mat-label>Complemento</mat-label>
+            <input
+              matInput
+              placeholder="apartamento 1001"
+              formControlName="complemento"
+            />
+          </mat-form-field>
+          <mat-form-field class="input-div">
+            <mat-label>Bairro</mat-label>
+            <input matInput placeholder="Centro" formControlName="bairro" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input-div spacing-form">
+            <mat-label>Cidade</mat-label>
+            <input
+              matInput
+              placeholder="Belo Horizonte"
+              formControlName="cidade"
+            />
+          </mat-form-field>
+          <mat-form-field class="input-div">
+            <mat-label>Estado</mat-label>
+            <input
+              matInput
+              placeholder="UF"
+              #uf
+              formControlName="uf"
+              maxlength="2"
+            />
+            <mat-hint align="end">{{ uf.value.length }} / 2</mat-hint>
           </mat-form-field>
         </p>
         <p>

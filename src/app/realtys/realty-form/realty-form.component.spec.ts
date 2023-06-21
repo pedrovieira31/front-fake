@@ -8,7 +8,7 @@ describe('RealtyFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RealtyFormComponent]
+      declarations: [RealtyFormComponent],
     });
     fixture = TestBed.createComponent(RealtyFormComponent);
     component = fixture.componentInstance;

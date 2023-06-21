@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Realty, realtyList } from '../model/realty';
+import { realtyList } from '../model/realty';
 
 @Component({
   selector: 'app-realty-form',

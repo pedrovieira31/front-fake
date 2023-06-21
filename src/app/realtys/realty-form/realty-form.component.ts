@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { realtyList } from '../model/realty';
+import { Realty, realtyList } from '../model/realty';
 
 @Component({
   selector: 'app-realty-form',
@@ -56,6 +56,10 @@ export class RealtyFormComponent implements OnInit {
     this.router.navigate([''], { relativeTo: this.route });
   }
   insertRealty() {
+    if (!this.validateInputs()) {
+      alert('Preencha os campos em branco!');
+      return;
+    }
     let idRealty = realtyList.length + 1;
     let newRealty = {
       id: idRealty,
@@ -74,5 +78,21 @@ export class RealtyFormComponent implements OnInit {
     realtyList.push(newRealty);
     console.log(realtyList);
     this.router.navigate([''], { relativeTo: this.route });
+  }
+  validateInputs() {
+    if (
+      this.form.value.cep === null ||
+      this.form.value.numero === null ||
+      this.form.value.valor === null ||
+      this.form.value.uf === null ||
+      this.form.value.rua === null ||
+      this.form.value.bairro === null ||
+      this.form.value.tipo === null ||
+      this.form.value.condominio === null
+    ) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }

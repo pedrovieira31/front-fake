@@ -37,6 +37,9 @@ export class RealtysComponent implements OnInit {
   onAdd() {
     this.router.navigate(['new'], { relativeTo: this.route });
   }
+
+  editRow() {}
+
   deleteRow(value: number) {
     const indexRealty = realtyList.findIndex((x) => x.id == value);
     realtyList.splice(indexRealty, 1);
